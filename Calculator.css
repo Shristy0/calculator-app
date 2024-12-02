@@ -1,0 +1,103 @@
+/* General body styling */
+body {
+  background: #d2ccc5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Calculator container */
+.Calculator {
+  width: 400px;
+  height: auto; /* Dynamic height based on content */
+  margin: 25px;
+  padding: 20px;
+  background-color:pink;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Button container - Ensuring correct wrapping */
+.Keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns for the calculator buttons */
+  gap: 10px; /* Gap between buttons */
+  width: 100%; /* Full width */
+  margin-top: 20px; /* Space above the keypad */
+}
+
+/* Styling for all buttons */
+.ButtonStyle {
+  background-color: #09f519;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px; /* Center the text vertically */
+  height: 50px;
+  width: 60px; /* Fixed width for all regular buttons */
+  border: 2px solid rgb(0, 0, 0); /* Black border for separation */
+  border-radius: 0; /* No rounded corners */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-sizing: border-box;
+}
+
+/* Hover and active states for buttons */
+.ButtonStyle:hover {
+  background-color: #087dbd;
+}
+
+.ButtonStyle:active {
+  background-color: #065f8c;
+  transform: scale(0.95);
+}
+
+/* Adjustments for "Show Me" and "Square" buttons */
+.ButtonStyle.show-me-button,
+.ButtonStyle.square-button {
+  width: 100%; /* Make the "Show Me" and "Square" buttons take up the full width of their grid cells */
+  font-size: 10px;
+  line-height: 50px; /* Center the text */
+  background-color: #3b85f2; /* Different background color for distinction */
+  white-space: nowrap; /* Prevent text from wrapping */
+  border: 2px solid black;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Styling for the screen input */
+.screen-row input {
+  width: 100%;
+  height: 40px;
+  background: rgb(133, 32, 32);
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: right;
+  font-size: 24px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Container for the image */
+.image-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Styling for the profile image */
+.profile-image {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
